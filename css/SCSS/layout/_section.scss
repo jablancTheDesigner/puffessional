@@ -1,0 +1,98 @@
+.section {
+    padding: 1.5rem 0;
+    min-height: 500px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    &--page{
+        background-color: white;  
+    }
+}
+.section-content{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 1rem;
+   
+}
+
+
+// custom sections
+.section--hero{
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), #111;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    .section-content{
+        display:flex;
+        align-items: center;
+        height: 100%;
+    }
+    .welcome-message{
+        width: 100%;
+        max-width: 350px;
+        margin-right: auto;
+        color: #ffffff;
+        position: relative;
+        z-index: 2;
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+        @media screen and (max-width:768px) {
+            margin: 0 auto;
+            text-align: center;
+            a {
+                margin-left: 0;
+            }
+        }
+        @media screen and (max-width:540px) {
+        }
+    }
+    .hero-create{
+        position: absolute;
+        bottom: 0rem;
+        right: 0rem;
+        color: #333333;
+        opacity: 0.50;
+        z-index: 1;
+        div{
+            line-height: 0.7;
+        }
+        span{
+            display: block;
+            font-size: 14rem;
+            font-weight: bold;
+        }
+    }
+}
+.section--about{
+    background-color: #ffffff;
+    padding: 5rem 0 150px;
+    .section-content{
+        height: 100%;
+    }
+    @media screen and (max-width:540px) {
+        overflow: hidden;
+    }
+}
+
+.section--shop{
+    padding: 3rem 0;
+    color: #fff;
+}
+
+.section--contact{
+   text-align: center;
+   border-top: 1px solid #cccccc;
+   background-color: #f6f6f6;
+}
+
+.section--categories{
+    min-height: 100px;
+    padding: 0;
+
+}

@@ -1,0 +1,29 @@
+.content-page__header{
+    position: relative;
+    text-align: right;
+    letter-spacing: -0.5rem;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+    &:after{
+        content: '';
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+        width: 150px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255,255,255,1) 100%);
+        z-index: 9;
+    }
+    
+}
+
+.content-page__title{
+    display: block;
+    font-size: 7rem;
+    font-weight: bold;
+    color: #eeeeee;
+    text-transform: uppercase;
+    line-height: 1;
+}

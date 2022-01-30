@@ -1,0 +1,1140 @@
+/* line 1, SCSS/layout/_global.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, SCSS/layout/_global.scss */
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+/* line 9, SCSS/layout/_global.scss */
+body {
+  margin-bottom: 250px;
+}
+
+/* line 12, SCSS/layout/_global.scss */
+.content {
+  box-sizing: border-box;
+}
+
+/* line 15, SCSS/layout/_global.scss */
+.bg-accent {
+  background-color: aqua;
+}
+
+/* line 18, SCSS/layout/_global.scss */
+.bg-black {
+  background-color: #000000;
+}
+
+/* line 21, SCSS/layout/_global.scss */
+.bg-darkgray {
+  background-color: #555555;
+}
+
+/* line 24, SCSS/layout/_global.scss */
+.bg-litegray {
+  background-color: #aaaaaa;
+}
+
+/* line 27, SCSS/layout/_global.scss */
+.bg-red {
+  background-color: red;
+}
+
+/* line 30, SCSS/layout/_global.scss */
+.bg-green {
+  background-color: green;
+}
+
+/* line 33, SCSS/layout/_global.scss */
+.bg-yellow {
+  background-color: #ffeb3b;
+}
+
+/* line 36, SCSS/layout/_global.scss */
+.puff-accent {
+  color: inherit;
+  position: relative;
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  padding: 15px 30px;
+}
+/* line 44, SCSS/layout/_global.scss */
+.puff-accent:before, .puff-accent:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  border-color: #fff;
+}
+/* line 52, SCSS/layout/_global.scss */
+.puff-accent:before {
+  border-top: 3px solid;
+  border-left: 3px solid;
+  bottom: 0;
+  left: 3px;
+}
+/* line 58, SCSS/layout/_global.scss */
+.puff-accent:after {
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  top: 0;
+  right: 3px;
+}
+/* line 64, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--header {
+  font-size: 1.5rem;
+}
+/* line 66, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--header--light {
+  color: white;
+}
+/* line 70, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--button {
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* line 73, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--button.accent-button--light {
+  color: #fff;
+}
+/* line 75, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--button.accent-button--light:before, .puff-accent.puff-accent--button.accent-button--light:after {
+  border-color: #fff;
+}
+/* line 80, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--button.accent-button--dark {
+  color: #000;
+}
+/* line 82, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--button.accent-button--dark:before, .puff-accent.puff-accent--button.accent-button--dark:after {
+  border-color: #000;
+}
+/* line 88, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--button:focus {
+  outline: none;
+}
+/* line 91, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--button:hover {
+  text-decoration: line-through;
+}
+/* line 93, SCSS/layout/_global.scss */
+.puff-accent.puff-accent--button:hover:before, .puff-accent.puff-accent--button:hover:after {
+  border-color: aqua;
+}
+
+/* line 102, SCSS/layout/_global.scss */
+.form-inner {
+  width: 100%;
+  max-width: 500px;
+  margin: 1.5rem auto;
+}
+/* line 106, SCSS/layout/_global.scss */
+.form-inner > div {
+  position: relative;
+  margin-bottom: 3rem;
+}
+/* line 111, SCSS/layout/_global.scss */
+.form-inner label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+/* line 116, SCSS/layout/_global.scss */
+.form-inner input, .form-inner textarea {
+  padding: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 0;
+  position: relative;
+  outline: none;
+}
+/* line 124, SCSS/layout/_global.scss */
+.form-inner input::placeholder, .form-inner textarea::placeholder {
+  color: #bbb;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* line 130, SCSS/layout/_global.scss */
+.form-inner input {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+/* line 134, SCSS/layout/_global.scss */
+.form-inner textarea {
+  border: 1px solid #ddd;
+}
+/* line 137, SCSS/layout/_global.scss */
+.form-inner .form-inner-submit {
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+/* line 142, SCSS/layout/_global.scss */
+.form-inner .form-inner-submit [type="submit"] {
+  padding: 15px 45px;
+  margin: 0;
+  border: none;
+}
+/* line 147, SCSS/layout/_global.scss */
+.form-inner .form-inner-submit .ajax-loader {
+  position: absolute;
+  background-color: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+/* line 155, SCSS/layout/_global.scss */
+.form-inner .form-inner-submit:before, .form-inner .form-inner-submit:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  border-color: #fff;
+}
+/* line 163, SCSS/layout/_global.scss */
+.form-inner .form-inner-submit:before {
+  border-top: 3px solid;
+  border-left: 3px solid;
+  bottom: 0;
+  left: 0;
+}
+/* line 169, SCSS/layout/_global.scss */
+.form-inner .form-inner-submit:after {
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 182, SCSS/layout/_global.scss */
+  .puff-accent {
+    color: inherit;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  /* line 186, SCSS/layout/_global.scss */
+  .puff-accent:before, .puff-accent:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    border-color: #fff;
+  }
+  /* line 194, SCSS/layout/_global.scss */
+  .puff-accent:before {
+    border-top: 3px solid;
+    border-left: 3px solid;
+    bottom: 0;
+    left: 0px;
+  }
+  /* line 200, SCSS/layout/_global.scss */
+  .puff-accent:after {
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    top: 0;
+    right: 0;
+  }
+}
+/* line 1, SCSS/layout/_section.scss */
+.section {
+  padding: 1.5rem 0;
+  min-height: 500px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+/* line 7, SCSS/layout/_section.scss */
+.section--page {
+  background-color: white;
+}
+
+/* line 11, SCSS/layout/_section.scss */
+.section-content {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* line 21, SCSS/layout/_section.scss */
+.section--hero {
+  background: radial-gradient(rgba(0, 0, 0, 0), #000000), #111;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+/* line 29, SCSS/layout/_section.scss */
+.section--hero .section-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+/* line 34, SCSS/layout/_section.scss */
+.section--hero .welcome-message {
+  width: 100%;
+  max-width: 350px;
+  margin-right: auto;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+/* line 41, SCSS/layout/_section.scss */
+.section--hero .welcome-message h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 34, SCSS/layout/_section.scss */
+  .section--hero .welcome-message {
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 48, SCSS/layout/_section.scss */
+  .section--hero .welcome-message a {
+    margin-left: 0;
+  }
+}
+/* line 55, SCSS/layout/_section.scss */
+.section--hero .hero-create {
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+  color: #333333;
+  opacity: 0.50;
+  z-index: 1;
+}
+/* line 62, SCSS/layout/_section.scss */
+.section--hero .hero-create div {
+  line-height: 0.7;
+}
+/* line 65, SCSS/layout/_section.scss */
+.section--hero .hero-create span {
+  display: block;
+  font-size: 14rem;
+  font-weight: bold;
+}
+
+/* line 72, SCSS/layout/_section.scss */
+.section--about {
+  background-color: #ffffff;
+  padding: 5rem 0 150px;
+}
+/* line 75, SCSS/layout/_section.scss */
+.section--about .section-content {
+  height: 100%;
+}
+@media screen and (max-width: 540px) {
+  /* line 72, SCSS/layout/_section.scss */
+  .section--about {
+    overflow: hidden;
+  }
+}
+
+/* line 83, SCSS/layout/_section.scss */
+.section--shop {
+  padding: 3rem 0;
+  color: #fff;
+}
+
+/* line 88, SCSS/layout/_section.scss */
+.section--contact {
+  text-align: center;
+  border-top: 1px solid #cccccc;
+  background-color: #f6f6f6;
+}
+
+/* line 94, SCSS/layout/_section.scss */
+.section--categories {
+  min-height: 100px;
+  padding: 0;
+}
+
+/* line 1, SCSS/layout/_nav.scss */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 30;
+}
+/* line 8, SCSS/layout/_nav.scss */
+nav.nav--page {
+  position: relative;
+  background: #000000;
+}
+/* line 12, SCSS/layout/_nav.scss */
+nav .nav-inner {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+/* line 20, SCSS/layout/_nav.scss */
+nav .nav-inner ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+  width: 100%;
+}
+/* line 26, SCSS/layout/_nav.scss */
+nav .nav-inner ul > li {
+  width: 100%;
+  margin: 0 1rem;
+  text-align: center;
+}
+/* line 30, SCSS/layout/_nav.scss */
+nav .nav-inner ul > li a {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 33, SCSS/layout/_nav.scss */
+nav .nav-inner ul > li a:hover, nav .nav-inner ul > li a:active {
+  text-decoration: line-through;
+}
+/* line 36, SCSS/layout/_nav.scss */
+nav .nav-inner ul > li a:hover:before, nav .nav-inner ul > li a:hover:after, nav .nav-inner ul > li a:active:before, nav .nav-inner ul > li a:active:after {
+  border-color: aqua;
+}
+@media screen and (max-width: 768px) {
+  /* line 26, SCSS/layout/_nav.scss */
+  nav .nav-inner ul > li {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 20, SCSS/layout/_nav.scss */
+  nav .nav-inner ul {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0;
+    flex: auto;
+  }
+  /* line 51, SCSS/layout/_nav.scss */
+  nav .nav-inner ul > li {
+    text-align: center;
+  }
+  /* line 54, SCSS/layout/_nav.scss */
+  nav .nav-inner ul a {
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* line 12, SCSS/layout/_nav.scss */
+  nav .nav-inner {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #000000;
+    border-left: 1px solid #fff;
+    z-index: 10;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 1024px) {
+  /* line 75, SCSS/layout/_nav.scss */
+  nav .nav-inner .logo img {
+    width: 100%;
+    padding: 1rem;
+    margin: 2.5rem auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  /* line 12, SCSS/layout/_nav.scss */
+  nav .nav-inner {
+    width: 100%;
+    right: -100%;
+  }
+}
+/* line 89, SCSS/layout/_nav.scss */
+nav .nav-mobile-trigger {
+  display: none;
+  z-index: 9;
+  margin-right: 30px;
+}
+/* line 93, SCSS/layout/_nav.scss */
+nav .nav-mobile-trigger a {
+  color: #ffffff;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  /* line 89, SCSS/layout/_nav.scss */
+  nav .nav-mobile-trigger {
+    display: block;
+  }
+}
+/* line 102, SCSS/layout/_nav.scss */
+nav .nav-inner-close {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  /* line 102, SCSS/layout/_nav.scss */
+  nav .nav-inner-close {
+    display: block;
+    text-align: center;
+  }
+  /* line 107, SCSS/layout/_nav.scss */
+  nav .nav-inner-close a {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+}
+/* line 113, SCSS/layout/_nav.scss */
+nav .logo-desktop {
+  padding-top: 2rem !important;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  /* line 1, SCSS/layout/_nav.scss */
+  nav {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* line 1, SCSS/layout/_nav.scss */
+  nav {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  /* line 126, SCSS/layout/_nav.scss */
+  nav .mobile-menu-header {
+    height: 125px;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* line 137, SCSS/layout/_nav.scss */
+.logo img, .logo svg {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+/* line 143, SCSS/layout/_nav.scss */
+.logo img.logo-desktop, .logo svg.logo-desktop {
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  /* line 143, SCSS/layout/_nav.scss */
+  .logo img.logo-desktop, .logo svg.logo-desktop {
+    display: none;
+  }
+}
+/* line 149, SCSS/layout/_nav.scss */
+.logo img.logo-mobile, .logo svg.logo-mobile {
+  display: none;
+  width: 75px;
+}
+@media screen and (max-width: 1024px) {
+  /* line 149, SCSS/layout/_nav.scss */
+  .logo img.logo-mobile, .logo svg.logo-mobile {
+    display: block;
+  }
+}
+/* line 158, SCSS/layout/_nav.scss */
+.logo.logo-mobile-menu {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  /* line 158, SCSS/layout/_nav.scss */
+  .logo.logo-mobile-menu {
+    display: block;
+    margin-right: auto;
+  }
+}
+/* line 165, SCSS/layout/_nav.scss */
+.logo.logo-main-menu {
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  /* line 169, SCSS/layout/_nav.scss */
+  .logo.logo-main-menu {
+    margin: 0 auto 0 0;
+  }
+  /* line 171, SCSS/layout/_nav.scss */
+  .logo.logo-main-menu img {
+    margin: 0 2rem;
+    width: 100px;
+  }
+}
+
+/* line 1, SCSS/layout/_footer.scss */
+.footer {
+  padding: 1rem;
+  background: #000000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  z-index: -1;
+}
+
+/* line 10, SCSS/layout/_footer.scss */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 15, SCSS/layout/_footer.scss */
+.footer-copyright {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 1, SCSS/layout/_checkout-cart.scss */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+/* line 6, SCSS/layout/_checkout-cart.scss */
+.sidebar .checkout-cart {
+  background-color: #000000;
+  width: auto;
+  padding: 0 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 14, SCSS/layout/_checkout-cart.scss */
+.sidebar .checkout-cart span {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 0.5rem;
+}
+/* line 20, SCSS/layout/_checkout-cart.scss */
+.sidebar .checkout-cart i {
+  display: none;
+}
+/* line 23, SCSS/layout/_checkout-cart.scss */
+.sidebar .checkout-cart svg {
+  width: 24px;
+}
+/* line 25, SCSS/layout/_checkout-cart.scss */
+.sidebar .checkout-cart svg path {
+  fill: #ffffff;
+}
+/* line 29, SCSS/layout/_checkout-cart.scss */
+.sidebar .checkout-cart ul {
+  padding: 0;
+}
+/* line 33, SCSS/layout/_checkout-cart.scss */
+.sidebar .checkout-cart:hover span {
+  color: aqua;
+}
+/* line 37, SCSS/layout/_checkout-cart.scss */
+.sidebar .checkout-cart:hover svg path {
+  fill: aqua;
+}
+
+/* line 47, SCSS/layout/_checkout-cart.scss */
+.woocommerce-checkout .form-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 54, SCSS/layout/_checkout-cart.scss */
+.woocommerce-form__label-for-checkbox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* line 58, SCSS/layout/_checkout-cart.scss */
+.woocommerce-form__label-for-checkbox span {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 66, SCSS/layout/_checkout-cart.scss */
+.shipping_address {
+  display: none;
+}
+
+/* line 1, SCSS/layout/_about.scss */
+.about-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100%;
+}
+/* line 8, SCSS/layout/_about.scss */
+.about-wrapper .about-img-collage {
+  width: 50%;
+  position: relative;
+}
+/* line 11, SCSS/layout/_about.scss */
+.about-wrapper .about-img-collage .image-collage {
+  position: relative;
+}
+/* line 14, SCSS/layout/_about.scss */
+.about-wrapper .about-img-collage img {
+  border-style: none;
+  display: block;
+  width: 250px;
+  position: absolute;
+}
+/* line 19, SCSS/layout/_about.scss */
+.about-wrapper .about-img-collage img.main-collage-img {
+  position: relative;
+  z-index: 3;
+  top: 0;
+}
+/* line 24, SCSS/layout/_about.scss */
+.about-wrapper .about-img-collage img.collage-img {
+  filter: grayscale(100%);
+  transition: 250ms linear;
+  transform: rotate(0) scale(1);
+}
+@media screen and (min-width: 540px) {
+  /* line 29, SCSS/layout/_about.scss */
+  .about-wrapper .about-img-collage img.collage-img:hover {
+    z-index: 6;
+    transform: rotate(0) scale(1.3);
+    filter: grayscale(0);
+  }
+}
+/* line 36, SCSS/layout/_about.scss */
+.about-wrapper .about-img-collage img:nth-child(2) {
+  left: 135px;
+  top: -28px;
+  transform: rotate(33deg);
+}
+/* line 41, SCSS/layout/_about.scss */
+.about-wrapper .about-img-collage img:nth-child(3) {
+  left: 0;
+  top: 173px;
+  transform: rotate(-21deg);
+  z-index: 2;
+}
+/* line 47, SCSS/layout/_about.scss */
+.about-wrapper .about-img-collage img:nth-child(4) {
+  left: 213px;
+  top: 144px;
+  z-index: 4;
+  transform: rotate(13deg);
+}
+/* line 56, SCSS/layout/_about.scss */
+.about-wrapper .about-text-wrapper {
+  width: 50%;
+  position: relative;
+  z-index: 5;
+  background-color: #ffffff;
+}
+/* line 63, SCSS/layout/_about.scss */
+.about-wrapper .about-text-inner h2 {
+  margin-bottom: 0.5rem;
+}
+/* line 66, SCSS/layout/_about.scss */
+.about-wrapper .about-text-inner p {
+  color: #888;
+  line-height: 1.4;
+}
+@media screen and (max-width: 540px) {
+  /* line 1, SCSS/layout/_about.scss */
+  .about-wrapper {
+    display: block;
+  }
+  /* line 73, SCSS/layout/_about.scss */
+  .about-wrapper .about-text-wrapper {
+    width: 100%;
+  }
+}
+
+/* line 1, SCSS/layout/_products.scss */
+.products-grid-header {
+  padding: 0rem 1.875rem;
+}
+
+/* line 5, SCSS/layout/_products.scss */
+.products-grid {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  position: relative;
+}
+/* line 11, SCSS/layout/_products.scss */
+.products-grid .product-item {
+  background-color: transparent;
+  text-align: center;
+  font-size: 30px;
+  border: solid 1px transparent;
+  height: auto;
+  flex-basis: 33.3%;
+  -ms-flex: auto;
+  width: 259px;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+/* line 23, SCSS/layout/_products.scss */
+.products-grid .product-item h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 1333px) {
+  /* line 11, SCSS/layout/_products.scss */
+  .products-grid .product-item {
+    flex-basis: 33.33%;
+  }
+}
+@media (max-width: 1073px) {
+  /* line 11, SCSS/layout/_products.scss */
+  .products-grid .product-item {
+    flex-basis: 33.33%;
+  }
+}
+@media (max-width: 815px) {
+  /* line 11, SCSS/layout/_products.scss */
+  .products-grid .product-item {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 555px) {
+  /* line 11, SCSS/layout/_products.scss */
+  .products-grid .product-item {
+    flex-basis: 100%;
+  }
+}
+/* line 44, SCSS/layout/_products.scss */
+.products-grid .product-item:hover {
+  border: solid 1px #ddd;
+}
+/* line 47, SCSS/layout/_products.scss */
+.products-grid .product-home-inner {
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  background-position: center center;
+  position: relative;
+}
+/* line 53, SCSS/layout/_products.scss */
+.products-grid .product-home-inner .price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #000000;
+  padding: 10px 15px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+/* line 65, SCSS/layout/_products.scss */
+.products-grid img {
+  width: 100%;
+}
+/* line 68, SCSS/layout/_products.scss */
+.products-grid h6 {
+  margin: 0;
+  font-size: 0.85em;
+  font-weight: normal;
+}
+/* line 73, SCSS/layout/_products.scss */
+.products-grid p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+/* line 78, SCSS/layout/_products.scss */
+.products-grid .about-img-collage {
+  width: auto;
+}
+/* line 80, SCSS/layout/_products.scss */
+.products-grid .about-img-collage img {
+  top: auto !important;
+}
+
+/* line 87, SCSS/layout/_products.scss */
+.product-info-container {
+  z-index: -9999;
+  position: relative;
+  height: 0;
+}
+/* line 91, SCSS/layout/_products.scss */
+.product-info-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+/* line 105, SCSS/layout/_products.scss */
+.product-info-container .product-item-card {
+  background-color: transparent;
+  margin: 10px;
+}
+/* line 108, SCSS/layout/_products.scss */
+.product-info-container .product-item-card .about-wrapper {
+  width: 600px;
+  align-items: unset;
+  opacity: 0.3;
+}
+@media screen and (max-width: 768px) {
+  /* line 108, SCSS/layout/_products.scss */
+  .product-info-container .product-item-card .about-wrapper {
+    width: 250px;
+  }
+}
+/* line 117, SCSS/layout/_products.scss */
+.product-info-container .product-item-card.slick-current .about-wrapper {
+  opacity: 1;
+}
+/* line 122, SCSS/layout/_products.scss */
+.product-info-container .product-item-card .main-collage-img img {
+  position: relative;
+  width: 100%;
+}
+/* line 128, SCSS/layout/_products.scss */
+.product-info-container.product-info--open {
+  z-index: 1;
+  height: auto;
+  padding: 2rem 0;
+}
+/* line 135, SCSS/layout/_products.scss */
+.product-info-container .about-text-wrapper {
+  padding: 1rem;
+  flex: auto;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+/* line 143, SCSS/layout/_products.scss */
+.product-info-container .about-text-wrapper h1 {
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+}
+/* line 147, SCSS/layout/_products.scss */
+.product-info-container .about-text-wrapper h3, .product-info-container .about-text-wrapper p {
+  margin: 0;
+}
+/* line 150, SCSS/layout/_products.scss */
+.product-info-container .about-text-wrapper h3 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+/* line 154, SCSS/layout/_products.scss */
+.product-info-container .about-text-wrapper .action-wrapper {
+  margin-top: auto;
+}
+/* line 157, SCSS/layout/_products.scss */
+.product-info-container .about-text-wrapper div {
+  color: #fff;
+  display: block;
+}
+/* line 161, SCSS/layout/_products.scss */
+.product-info-container .about-text-wrapper .action-wrapper {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  /* line 135, SCSS/layout/_products.scss */
+  .product-info-container .about-text-wrapper {
+    text-align: center;
+  }
+}
+
+/* line 169, SCSS/layout/_products.scss */
+.products-grid-wrapper {
+  position: relative;
+}
+
+/* line 173, SCSS/layout/_products.scss */
+.more-products {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* line 179, SCSS/layout/_products.scss */
+.product a.button {
+  position: relative;
+  background: transparent !important;
+  color: white;
+  padding: 15px 15%;
+  margin-top: 2rem;
+}
+/* line 185, SCSS/layout/_products.scss */
+.product a.button:before, .product a.button:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  border-color: #fff;
+}
+/* line 193, SCSS/layout/_products.scss */
+.product a.button:before {
+  border-top: 3px solid;
+  border-left: 3px solid;
+  bottom: 0;
+  left: 3px;
+}
+/* line 199, SCSS/layout/_products.scss */
+.product a.button:after {
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  top: 0;
+  right: 3px;
+}
+/* line 206, SCSS/layout/_products.scss */
+.product a.button:hover:before, .product a.button:hover:after {
+  border-color: aqua;
+}
+
+/* line 216, SCSS/layout/_products.scss */
+.woocommerce-loop-product__title {
+  color: #333333;
+  font-weight: bold;
+}
+
+/* line 222, SCSS/layout/_products.scss */
+.single-product__title {
+  color: #333333;
+}
+
+/* line 227, SCSS/layout/_products.scss */
+.category {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  transition: all 350ms ease;
+  background-size: cover;
+  background-position: center center;
+}
+/* line 236, SCSS/layout/_products.scss */
+.category p {
+  position: relative;
+  z-index: 3;
+}
+/* line 240, SCSS/layout/_products.scss */
+.category:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+/* line 251, SCSS/layout/_products.scss */
+.category:hover:before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 1, SCSS/layout/_tags.scss */
+.tag {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/* line 6, SCSS/layout/_tags.scss */
+.tag--top-seller {
+  background-color: aqua;
+  display: block;
+  font-size: 0.9rem;
+  z-index: 5;
+  font-weight: bold;
+  padding: 5px 10px;
+  color: #000000;
+}
+
+/* line 1, SCSS/layout/_content.scss */
+.content-page__header {
+  position: relative;
+  text-align: right;
+  letter-spacing: -0.5rem;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* line 9, SCSS/layout/_content.scss */
+.content-page__header:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 150px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white 100%);
+  z-index: 9;
+}
+
+/* line 22, SCSS/layout/_content.scss */
+.content-page__title {
+  display: block;
+  font-size: 7rem;
+  font-weight: bold;
+  color: #eeeeee;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* line 1, SCSS/layout/_blog.scss */
+.blog-post-title {
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 5, SCSS/layout/_blog.scss */
+.blog-post-title a {
+  color: #000000;
+}
+
+/* line 10, SCSS/layout/_blog.scss */
+.blog-post-meta {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}

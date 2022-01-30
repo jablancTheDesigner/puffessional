@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+body{
+    margin-bottom: 250px;
+}
+.content{
+    box-sizing: border-box;
+}
+.bg-accent{
+    background-color: $puff-accent;
+}
+.bg-black{
+    background-color: #000000;
+}
+.bg-darkgray{
+    background-color: #555555;
+}
+.bg-litegray{
+    background-color: #aaaaaa;
+}
+.bg-red{
+ background-color: red;   
+}
+.bg-green{
+    background-color: green;
+}
+.bg-yellow{
+    background-color: #ffeb3b;
+}
+.puff-accent{
+    color: inherit;
+    position: relative;
+    margin-top: 1rem; 
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    padding: 15px 30px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 20px;
+        border-color: #fff;
+    }
+    &:before{
+        border-top: 3px solid;
+        border-left: 3px solid;
+        bottom: 0;
+        left: 3px;
+    }
+    &:after{
+        border-right: 3px solid;
+        border-bottom: 3px solid;
+        top: 0;
+        right: 3px;
+    }
+    &.puff-accent--header{
+        font-size:1.5rem;
+        &--light{
+            color: white;
+        }
+    }
+    &.puff-accent--button{
+        font-size:1rem;
+        cursor: pointer;
+        &.accent-button--light{
+            color: #fff;
+            &:before,
+            &:after {
+                border-color: #fff;
+            }
+        }
+        &.accent-button--dark{
+            color: #000;
+            &:before,
+            &:after {
+                border-color: #000;
+            }
+        }
+        
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            text-decoration: line-through;
+            &:before,
+            &:after {
+                border-color: aqua;
+            }               
+        }
+       
+    }
+}
+
+.form-inner{
+    width: 100%;
+    max-width: 500px;
+    margin: 1.5rem auto;
+    > div {
+        position: relative;
+        margin-bottom: 3rem;
+       
+    }
+    label{
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    input, textarea{
+        padding: 1rem;
+        width: 100%;
+        font-size: 1rem;
+        border-radius: 0;
+        position: relative;
+        outline: none;
+        
+        &::placeholder {
+            color: #bbb;
+            font-size: 1.5em;
+            font-weight: bold;
+          }
+    }
+    input{
+        border: 0; 
+        border-bottom: 1px solid #ddd;
+    }
+    textarea{
+        border: 1px solid #ddd;
+    }
+    .form-inner-submit {
+        position: relative;
+        display:  inline-flex;;
+        margin: 0;
+        padding: 0;
+        [type="submit"]{
+            padding: 15px 45px;
+            margin: 0;
+            border: none;
+        }
+        .ajax-loader{
+            position: absolute;
+            background-color: #ccc;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+        }
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 20px;
+            border-color: #fff;
+        }
+        &:before{
+            border-top: 3px solid;
+            border-left: 3px solid;
+            bottom: 0;
+            left: 0;
+        }
+        &:after{
+            border-right: 3px solid;
+            border-bottom: 3px solid;
+            top: 0;
+            right: 0;
+        }
+       
+    }
+   
+}
+
+
+@media screen and (max-width:768px) {
+    .puff-accent{
+        color: inherit;
+        font-size:1.5rem;
+        position: relative;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 20px;
+            border-color: #fff;
+        }
+        &:before{
+            border-top: 3px solid;
+            border-left: 3px solid;
+            bottom: 0;
+            left: 0px;
+        }
+        &:after{
+            border-right: 3px solid;
+            border-bottom: 3px solid;
+            top: 0;
+            right: 0;
+        }
+    }
+}

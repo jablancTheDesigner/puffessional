@@ -1,0 +1,14 @@
+.tag{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.tag--top-seller{
+    background-color: $puff-accent;
+    display: block;
+    font-size: 0.9rem;
+    z-index: 5;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: #000000;
+}
