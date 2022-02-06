@@ -1,0 +1,12 @@
+<div class="product-list">
+    <div class="product-list__box" *ngFor="let product of products">
+        <a [routerLink]="['/shop','product',product.id]">
+            <div class="product__card">
+                <img src="{{product.image}}" alt="" class="product__image">
+                <h3 class="product__title">{{product.title}}</h3>
+                <p class="product__category">{{product.category}}</p>
+                <h3 class="product__price">{{product.price | currency}}</h3>
+            </div>
+        </a>
+    </div>
+</div>

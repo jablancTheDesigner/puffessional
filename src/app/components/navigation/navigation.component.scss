@@ -1,0 +1,26 @@
+.nav{
+    border-bottom: 3px solid #D4AF37;
+
+    &__logo{
+        padding: 1rem;
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list{
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        list-style: none;
+    }
+
+    &__link{
+        margin-right: 1rem;
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}

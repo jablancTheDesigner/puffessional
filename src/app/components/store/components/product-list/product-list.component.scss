@@ -1,0 +1,43 @@
+.product-list{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.5rem 1rem;
+
+    &__box{
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1024px){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 767px){
+        display: block;
+    }
+}
+
+.product {
+
+    &__card{
+        padding: 1rem;
+        text-align: center;
+        line-height: 1.2;
+        border-radius: 20px;
+        transition: all ease 350ms;
+        &:hover{
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+        }
+    }
+
+    &__image {
+        display: block;
+        max-width: 500px;
+        height: 200px;
+        margin: auto;
+    }
+
+    &__price {
+        font-size: 2.5rem;
+    }
+}

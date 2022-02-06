@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="product-detail" *ngIf="product">
+        <div class="product-detail__col">
+            <img class="product-detail__image" src="{{product.image}}" alt="">
+        </div>
+        <div class="product-detail__col">
+            <h1 class="product-detail__title">{{product.title}}</h1>
+            <p class="product-detail__category">{{product.category}}</p>
+            <h3 class="product-detail__price">{{product.price | currency}}</h3>
+        </div>
+    </div>
+
+
+    <div class="similar-products" *ngIf="similarProducts">
+        <hr>
+        <app-product-list [products]="similarProducts"></app-product-list>
+    </div>
+</div>

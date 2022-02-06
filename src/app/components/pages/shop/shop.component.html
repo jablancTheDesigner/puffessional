@@ -1,0 +1,8 @@
+<app-hero-page>
+    Shop
+</app-hero-page>
+
+<div class="container">
+    <div class="loading" *ngIf="loading"> Loading...</div>
+    <app-product-list [products]="products" *ngIf="!loading"></app-product-list>
+</div>
