@@ -11,6 +11,8 @@ import { HeroPageComponent } from './components/common/hero/hero-page/hero-page.
 import { ShopComponent } from './components/pages/shop/shop.component';
 import { ProductDetailsComponent } from './components/store/components/product-details/product-details.component';
 import { ProductListComponent } from './components/store/components/product-list/product-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ProductListComponent } from './components/store/components/product-list
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

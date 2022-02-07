@@ -5,6 +5,7 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ShopComponent } from './components/pages/shop/shop.component';
 import { ProductDetailsComponent } from './components/store/components/product-details/product-details.component';
+import { ProductsResolverService } from './components/store/routing/resolves/products-resolver.service';
 
 const routes: Routes = [
   {
@@ -18,6 +19,9 @@ const routes: Routes = [
     component: AboutComponent
   }, {
     path: 'shop',
+    resolve: {
+      products: ProductsResolverService
+    },
     children: [
       {
         path: '',

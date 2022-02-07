@@ -1,5 +1,4 @@
 .nav{
-    border-bottom: 3px solid #D4AF37;
 
     &__logo{
         padding: 1rem;
@@ -23,4 +22,10 @@
             margin-right: 0;
         }
     }
+
+    &__mobile{
+        display: none;
+    }
+
+    
 }

@@ -1,16 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 *{
     box-sizing: border-box;
-
 }
 
-html, body{
+html, body { height: 100%; }
+
+body{
     padding: 0;
     margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    color: #333;
 }
 
 .container{
     max-width: 1170px;
     width: 100%;
     margin: auto;
+}
+
+a{
+    text-decoration: none;
+  
 }
