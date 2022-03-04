@@ -42,15 +42,15 @@ export default function Cart(props) {
         <div className="offcanvas-body">
           <ul className="p-0">
             {props.cart.length > 0 &&
-              props.cart.map((group) => {
+              props.cart.map((item, idx) => {
                 return (
-                  <li className="list-group-item d-flex">
+                  <li className="list-group-item d-flex" key={idx}>
                     <div className="me-auto">
-                      <div className="fw-bold pe-3">{group.title}</div>
-                      {group.category}
+                      <div className="fw-bold pe-3">{item.title}</div>
+                      {item.category}
                     </div>
                     <div className="text-right d-flex flex-column">
-                      {`$${group.price.toFixed(2)}`}
+                      {`$${item.price.toFixed(2)}`}
                       <button
                         onClick={() => props.removeFromCart(props.id)}
                         className="mt-auto btn btn-danger"

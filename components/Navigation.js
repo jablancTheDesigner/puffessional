@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Cart from "./Cart";
 import axios from "axios";
+import Link from "next/link";
 
 export default function Navigation(props) {
   const [categories, setCategories] = useState([]);
@@ -10,7 +11,7 @@ export default function Navigation(props) {
       .catch((err) => {
         console.log(err);
       });
-    setCategories([]);
+    setCategories([...resp.data]);
   };
   useEffect(() => {
     fetchCategories();
@@ -56,6 +57,16 @@ export default function Navigation(props) {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li className="nav-item">
+                  <a href="/" className="nav-link">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/about" className="nav-link">
+                    About
+                  </a>
+                </li>
                 {categories &&
                   categories.map((link) => {
                     return (
