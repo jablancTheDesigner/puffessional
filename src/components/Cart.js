@@ -1,10 +1,34 @@
 import React from "react";
-import Product from "./Product";
 
 export default function Cart(props) {
   const price = props.cart.reduce((total, item) => {
     return total + item.price;
   }, 0);
+
+  const cartBreakDown = props.cart.reduce((obj, item) => {
+    if (obj.indexOf(item) > -1) {
+      obj[obj.indexOf(item)] = {
+        ...item,
+        count: obj[obj.indexOf(item)] ? obj[obj.indexOf(item)].count + 1 : 1,
+        price: obj[obj.indexOf(item)]
+          ? (obj[obj.indexOf(item)].count + 1) * item.price
+          : item.price,
+      };
+    } else {
+      item.count = 1;
+      obj.push(item);
+    }
+    // obj[`item-${item.id}`] = {
+    //   ...item,
+    //   count: obj[`item-${item.id}`] ? obj[`item-${item.id}`].count + 1 : 1,
+    //   price: obj[`item-${item.id}`]
+    //     ? (obj[`item-${item.id}`].count + 1) * item.price
+    //     : item.price,
+    // };
+    return obj;
+  }, []);
+
+  console.log(cartBreakDown);
 
   return (
     <>
@@ -44,22 +68,33 @@ export default function Cart(props) {
         <div className="offcanvas-body">
           <ul class="p-0">
             {props.cart.length > 0 &&
-              props.cart.map((item) => {
+              cartBreakDown.map((group) => {
                 return (
                   <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div class="me-auto">
-                      <div class="fw-bold pe-3">{item.title}</div>
-                      {item.category}
+                      <div class="fw-bold pe-3">
+                        {group.title} x{group.count}
+                      </div>
+                      {group.category}
                     </div>
-                    <span class="">{`$${item.price.toFixed(2)}`}</span>
+                    <div class="text-right d-block">
+                      {`$${group.price.toFixed(2)}`}
+                      <button onClick={() => props.removeFromCart(props.id)}>
+                        {" "}
+                        Remove
+                      </button>
+                    </div>
                   </li>
                 );
               })}
+            {props.cart.length === 0 && (
+              <li class="list-group-item text-center">Cart Empty</li>
+            )}
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="me-auto">
-                <div class="fw-bold display-4">Total</div>
+                <div class="fw-bold fs-4">Total</div>
               </div>
-              <span class="display-4">{`$${price.toFixed(2)}`}</span>
+              <span class="display-4 fs-1">{`$${price.toFixed(2)}`}</span>
             </li>
           </ul>
         </div>

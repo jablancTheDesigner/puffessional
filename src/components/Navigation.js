@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Cart from "./Cart";
+import axios from "axios";
 
 export default function Navigation(props) {
+  const [categories, setCategories] = useState([]);
+  const fetchCategories = async () => {
+    const resp = await axios
+      .get("https://fakestoreapi.com/products/categories")
+      .catch((err) => {
+        console.log(err);
+      });
+    await setCategories([...resp.data]);
+  };
+  useEffect(() => {
+    fetchCategories();
+  }, []);
   return (
     <>
       <nav className="navbar navbar-light bg-light">
         <div className="container">
-          <Cart cart={props.cart} />
-          <a
+          <Cart cart={props.cart} removeFromCart={props.removeFromCart} />
+          <Link
+            to="/"
             className="navbar-brand m-0 text-center fs-2 fw-bold text-uppercase"
-            href="#"
           >
             Logo
-          </a>
-          <a
+          </Link>
+
+          <button
             className="navbar-toggler border-0 outline-0"
             type="button"
             data-bs-toggle="offcanvas"
@@ -21,7 +36,7 @@ export default function Navigation(props) {
             aria-controls="offcanvasNavbar"
           >
             <span className="navbar-toggler-icon"></span>
-          </a>
+          </button>
 
           <div
             className="offcanvas offcanvas-end"
@@ -42,32 +57,17 @@ export default function Navigation(props) {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                {props.categories &&
-                  props.categories.map((link) => {
+                {categories &&
+                  categories.map((link) => {
                     return (
                       <li className="nav-item">
-                        <a
-                          className="nav-link active"
-                          aria-current="page"
-                          href="#"
-                        >
+                        <Link to="/" className="nav-link">
                           {link}
-                        </a>
+                        </Link>
                       </li>
                     );
                   })}
               </ul>
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
           </div>
         </div>
