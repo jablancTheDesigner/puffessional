@@ -10,7 +10,7 @@ export default function Navigation(props) {
       .catch((err) => {
         console.log(err);
       });
-    setCategories([...resp.data]);
+    setCategories([]);
   };
   useEffect(() => {
     fetchCategories();

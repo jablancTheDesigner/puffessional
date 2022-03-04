@@ -1,8 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 import React, { useState } from "react";
-import Header from "../components/Header";
-import Navigation from "../components/Navigation";
 
 export default function Document() {
   return (

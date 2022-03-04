@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import "react-loading-skeleton/dist/skeleton.css";
 import Head from "next/head";
 import Navigation from "../components/Navigation";
+import "bootstrap/dist/css/bootstrap.css";
+import "react-loading-skeleton/dist/skeleton.css";
+import "../styles/globals.css";
 
 function StoreApp({ Component, pageProps }) {
   const [cart, setCart] = useState([]);
