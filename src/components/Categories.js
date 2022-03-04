@@ -17,8 +17,8 @@ export default function Categories() {
   }, []);
 
   return (
-    <div class="container px-4 py-5" id="custom-cards">
-      <div class="row  align-items-stretch g-4 py-5">
+    <div className="container px-4 py-5" id="custom-cards">
+      <div className="row  align-items-stretch g-4 py-5">
         {categories &&
           categories.map((category) => {
             return (

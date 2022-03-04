@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Cart from "./Cart";
 import axios from "axios";
 
@@ -11,7 +10,7 @@ export default function Navigation(props) {
       .catch((err) => {
         console.log(err);
       });
-    await setCategories([...resp.data]);
+    setCategories([...resp.data]);
   };
   useEffect(() => {
     fetchCategories();
@@ -21,12 +20,12 @@ export default function Navigation(props) {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <Cart cart={props.cart} removeFromCart={props.removeFromCart} />
-          <Link
-            to="/"
+          <a
+            href="/"
             className="navbar-brand m-0 text-center fs-2 fw-bold text-uppercase"
           >
             Logo
-          </Link>
+          </a>
 
           <button
             className="navbar-toggler border-0 outline-0"
@@ -60,10 +59,10 @@ export default function Navigation(props) {
                 {categories &&
                   categories.map((link) => {
                     return (
-                      <li className="nav-item">
-                        <Link to="/" className="nav-link">
+                      <li className="nav-item" key={link}>
+                        <a href="/" className="nav-link">
                           {link}
-                        </Link>
+                        </a>
                       </li>
                     );
                   })}

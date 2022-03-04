@@ -1,34 +1,9 @@
 import React from "react";
 
 export default function Cart(props) {
-  const price = props.cart.reduce((total, item) => {
+  const totalPrice = props.cart.reduce((total, item) => {
     return total + item.price;
   }, 0);
-
-  const cartBreakDown = props.cart.reduce((obj, item) => {
-    if (obj.indexOf(item) > -1) {
-      obj[obj.indexOf(item)] = {
-        ...item,
-        count: obj[obj.indexOf(item)] ? obj[obj.indexOf(item)].count + 1 : 1,
-        price: obj[obj.indexOf(item)]
-          ? (obj[obj.indexOf(item)].count + 1) * item.price
-          : item.price,
-      };
-    } else {
-      item.count = 1;
-      obj.push(item);
-    }
-    // obj[`item-${item.id}`] = {
-    //   ...item,
-    //   count: obj[`item-${item.id}`] ? obj[`item-${item.id}`].count + 1 : 1,
-    //   price: obj[`item-${item.id}`]
-    //     ? (obj[`item-${item.id}`].count + 1) * item.price
-    //     : item.price,
-    // };
-    return obj;
-  }, []);
-
-  console.log(cartBreakDown);
 
   return (
     <>
@@ -39,8 +14,7 @@ export default function Cart(props) {
         data-bs-target="#cart"
         aria-controls="cart"
       >
-        {/* <span className="navbar-toggler-icon"></span> */}
-        <span class="material-icons fs-3">shopping_cart</span>
+        <span className="material-icons fs-3">shopping_cart</span>
 
         {props.cart.length > 0 && (
           <span className="position-absolute top-0 mt-2 mw-2 start-100 translate-middle badge rounded-pill bg-danger">
@@ -66,21 +40,21 @@ export default function Cart(props) {
           ></button>
         </div>
         <div className="offcanvas-body">
-          <ul class="p-0">
+          <ul className="p-0">
             {props.cart.length > 0 &&
-              cartBreakDown.map((group) => {
+              props.cart.map((group) => {
                 return (
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="me-auto">
-                      <div class="fw-bold pe-3">
-                        {group.title} x{group.count}
-                      </div>
+                  <li className="list-group-item d-flex">
+                    <div className="me-auto">
+                      <div className="fw-bold pe-3">{group.title}</div>
                       {group.category}
                     </div>
-                    <div class="text-right d-block">
+                    <div className="text-right d-flex flex-column">
                       {`$${group.price.toFixed(2)}`}
-                      <button onClick={() => props.removeFromCart(props.id)}>
-                        {" "}
+                      <button
+                        onClick={() => props.removeFromCart(props.id)}
+                        className="mt-auto btn btn-danger"
+                      >
                         Remove
                       </button>
                     </div>
@@ -88,13 +62,15 @@ export default function Cart(props) {
                 );
               })}
             {props.cart.length === 0 && (
-              <li class="list-group-item text-center">Cart Empty</li>
+              <li className="list-group-item text-center">Cart Empty</li>
             )}
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="me-auto">
-                <div class="fw-bold fs-4">Total</div>
+            <li className="list-group-item d-flex justify-content-between align-items-start">
+              <div className="me-auto">
+                <div className="fw-bold fs-4">Total</div>
               </div>
-              <span class="display-4 fs-1">{`$${price.toFixed(2)}`}</span>
+              <span className="display-4 fs-1">
+                {`$${totalPrice.toFixed(2)}`}
+              </span>
             </li>
           </ul>
         </div>

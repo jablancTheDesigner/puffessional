@@ -20,11 +20,11 @@ export default function CategorySingle(props) {
   return (
     <Link to="/">
       <div
-        class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+        className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
         key={props.category}
       >
-        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-          <h2 class="pt-5 mt-5 mb-4 display-6 lh-2 text-capitalize mt-auto">
+        <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h2 className="pt-5 mt-5 mb-4 display-6 lh-2 text-capitalize mt-auto">
             <span className="fw-bold">{props.category}</span>
             <small className="d-block fw-medium">{count} Items</small>
           </h2>
