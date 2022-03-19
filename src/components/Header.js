@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import Cart from "./Cart";
 
 const HeaderDiv = styled.div`
-  background-color: black;
+  background-color: #000000;
+  padding: 5px;
+  color: #fff;
   text-align: center;
-  color: white;
+  font-size: 12px;
 `;
 
 export default function Header() {
   return (
     <>
-      <HeaderDiv>
-        <h2>Header Text</h2>
-      </HeaderDiv>
+      <HeaderDiv>One stop shop for all needs!</HeaderDiv>
     </>
   );
 }
