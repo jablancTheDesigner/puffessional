@@ -5,11 +5,6 @@ import { useDispatch } from "react-redux";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const ButtonGroup = styled.div`
-  display: flex;
-  width: 100%;
-`;
-
 const Button = styled.button`
   flex: 1;
 `;
@@ -27,7 +22,7 @@ export default function Product(props) {
   return (
     <div className="col-12 col-md-6 col-lg-4" key={id}>
       <div className="product card border-0 position-relative">
-        <img src={image} style={imageStyling} />
+        <img src={image} style={imageStyling} alt={title} />
         <div className="mt-auto text-center card-body d-flex flex-column p-0">
           <div className="px-2">
             <h2 className="meta price display-4 mt-auto mb-0 text-primary">

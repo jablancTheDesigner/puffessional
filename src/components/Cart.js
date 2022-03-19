@@ -56,7 +56,11 @@ export default function Cart(props) {
               return (
                 <div className="d-flex justify-content-between border-top py-2">
                   <div className="pe-3 d-flex">
-                    <img src={item.payload.data.image} style={imageStyling} />
+                    <img
+                      src={item.payload.data.image}
+                      style={imageStyling}
+                      alt={item.payload.data.title}
+                    />
                     <p className="m-0">{item.payload.data.title}</p>
                   </div>
                   <div className="text-right d-flex mw-4">
@@ -71,7 +75,7 @@ export default function Cart(props) {
                 </div>
               );
             })}
-          {cart.length == 0 && (
+          {cart.length === 0 && (
             <div className="d-flex justify-content-between">
               <div className="text-center">No Items</div>
             </div>

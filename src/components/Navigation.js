@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Cart from "../components/Cart";
-import axios from "axios";
 
 export default function Navigation(props) {
   return (

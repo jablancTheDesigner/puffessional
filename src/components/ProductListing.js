@@ -3,17 +3,18 @@ import Product from "./Product";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 
-function SkelotonWrapper({ children }) {
-  return <div className="col-12 col-md-6 col-lg-4">{children}</div>;
-}
-
 export default function ProductListing(props) {
   const [error, setError] = useState(null);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchCategory = async (category = null) => {
+  function SkelotonWrapper({ children }) {
+    return <div className="col-12 col-md-6 col-lg-4">{children}</div>;
+  }
+
+  const fetchCategory = async (event, category = null) => {
+    event.preventDefault();
     let url = "https://fakestoreapi.com/products/";
     if (category) {
       url = "https://fakestoreapi.com/products/category/" + category;
@@ -75,25 +76,23 @@ export default function ProductListing(props) {
           <>
             <ul class="nav justify-content-center mb-4">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
+                <button
+                  class="nav-link bg-transparent border-0 outline-0 text-capitalize"
                   aria-current="page"
-                  href="#"
-                  onClick={() => fetchCategory()}
+                  onClick={(e) => fetchCategory(e)}
                 >
                   All
-                </a>
+                </button>
               </li>
               {categories.map((link, idx) => {
                 return (
                   <li class="nav-item" key={`category-${idx}`}>
-                    <a
-                      class="nav-link"
-                      href="#"
-                      onClick={() => fetchCategory(link)}
+                    <button
+                      class="nav-link bg-transparent border-0 outline-0 text-capitalize"
+                      onClick={(e) => fetchCategory(e, link)}
                     >
                       {link}
-                    </a>
+                    </button>
                   </li>
                 );
               })}

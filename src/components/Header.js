@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Cart from "./Cart";
 
 const HeaderDiv = styled.div`
   background-color: #000000;
